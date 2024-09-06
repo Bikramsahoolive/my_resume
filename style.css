@@ -16,7 +16,7 @@ body{
 .container{
     width: 100%;
     max-width: 800px;
-    height:210vh;
+    height:auto;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 black;
     background-color: white;
@@ -25,6 +25,7 @@ body{
     align-items: center;
     margin: 25px 100px;
     position: relative;
+    padding-bottom: 20px;
 }
 header{
     width: 100%;
@@ -43,35 +44,40 @@ header h3{
     font-weight: 200;
 }
 header .image{
-    height: 100%;
-    width: 0;
+    height: 50px;
+    width:50px;
     transform: scale(0,0);
-    /* transition: all 0.5s; */
+    transition: all 0.3s;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .unhide{
     width: 30%;
     height: 100%;
     transform: scale(1,1);
-    transition: all 0.5s;
+    transition: all 0.3s;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header img{
-    width: 150px;
-    border-radius: 50%;
-    margin-left: 20px;
-    box-shadow: 0 0 5px 5px rgb(165, 164, 164);
+    width: 130px;
 }
 header .header-content{
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
+}
+header .header-content p {
+    color: white;
+    margin-top: 10px;
 }
 .content{
     display: flex;
@@ -81,18 +87,18 @@ header .header-content{
 }
 .content .details{
     width: 350px;
-    margin : 0px 20px;
+    margin : 5px 20px;
 }
 .content .details h2{
     border-bottom: 2px solid rgb(8, 38, 134);
-    width: 210px;
-    margin-bottom:15px;
-    padding-bottom: 30px;
+    width: 300px;
+    margin-bottom:10px;
+    padding-bottom: 10px;
     color: rgb(8, 21, 59);
 }
 .contact li{
     list-style: none;
-    padding-top: 15px;
+    padding-top: 20px;
 }
 a{
     display:none;
@@ -101,7 +107,7 @@ a{
     display:inline-block;
     text-decoration: none;
     color: rgb(17, 54, 133);
-    font-size: 18px;
+    font-size: 16px;
 }
 .contact li a:hover{
     text-decoration: underline;
@@ -114,15 +120,16 @@ a{
 .developement-skill li{
     list-style: inside;
     padding-bottom: 10px;
-    font-size: 19px;
+    font-size: 16px;
     color: #2030a1;
-    font-weight: 700;
+    font-weight: 600;
 }
 .developement-skill p{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-left: 25px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: justify;
+    font-size: 15px;
 }
 .computer-skill li{
     list-style: inside;
@@ -139,6 +146,17 @@ a{
 .complete{
     font-style:italic;
 }
+.experience{
+    width: 95%;
+    margin-left: 20px;
+}
+.project h2{
+    border-bottom: 2px solid rgb(8, 38, 134);
+    width: 300px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: rgb(8, 21, 59);
+}
 .project li{
     list-style: inside;
     padding-bottom: 5px;
@@ -146,7 +164,8 @@ a{
     color: #2030a1;
 }
 .project p{
-    text-align: justify;
+    /* text-align: justify; */
+    font-size: 15px;
 }
 .other-activities p{
     text-align: justify;
@@ -200,7 +219,7 @@ a{
 }
 footer{
     width: 100%;
-    height:30px;
+    height:40px;
     background-color: #2030a1;
     position: absolute;
     bottom: 0;
@@ -209,12 +228,12 @@ footer{
 
 @media print {
     .container{
-        height: 100vh;
+        height: 200vh;
         max-width: 100%;
         margin: 0;
     }
     header{
-        height: 15vh;
+        height: 14vh;
     }
     header h1{
         
@@ -281,7 +300,7 @@ footer{
         margin-left: 25px;
     }
     header .header-content{
-        width: 100%;
+        width: 90%;
     }
     .content .details h2{
         margin-top: 30px;
@@ -290,12 +309,21 @@ footer{
         position: fixed;
     }
     header{
-        position: fixed;
-        top: 30px;
+        position: relative;
+        top: 50px;
     }
-    .content{
-        margin-top: 200px;
+    /* .content{
+        margin-top: 300px;
+    } */
+}
+@media screen and (max-width:540px) {
+    header{
+        height: auto;
+        max-height: 45vh;
+        flex-direction: column;
+        align-items: center;
     }
+
 }
 @media screen and (max-width:390px) {
     .content{
@@ -305,7 +333,7 @@ footer{
         width: 300px;
         margin: 20px 0px;
     }
-    header img{
+    /* header img{
         width: 70px;
-    }
+    } */
 }
