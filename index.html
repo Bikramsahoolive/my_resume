@@ -17,6 +17,7 @@
         <div class="print">
             <div class="user-icon">
                 <i class="fa-solid fa-user" onclick="displayUser()"></i>
+                <i class="fa-solid fa-pen-to-square" id="edit" onclick="editData()"></i>
             </div>
 
             <div class="color">
@@ -76,9 +77,9 @@
                     <h2>Skills and Expertise</h2>
                     <ul>
                         <li>Frontend Technologies.</li>
-                        <p>HTML5 | CSS3 | Javascript | Bootstrap | Angular </p>
+                        <p>HTML5 | CSS3 | JavaScript | Bootstrap | Angular </p>
                         <li>Backend Technologies.</li>
-                        <p>Node JS | Express JS | PhP | Type Script </p>
+                        <p>Node JS | Express JS | PhP | TypeScript </p>
                         <li>Database Technologies.</li>
                         <p> PostgreSQL | Firestore | MongoDB | CloudStore</p>
                         <li>Other Skills & Technologies.</li>
@@ -109,8 +110,9 @@
                              <span style="font-style:normal; color: #096bba;">* Advanced WebAuthn with Passkeys</span> :  Implements a secure, passwordless login system using WebAuthn, allowing homeowners and tenants to authenticate using biometric methods like Touch ID or Face ID, enhancing security and user convenience. <br>
                              <span style="font-style:normal; color: #096bba;">* User-Friendly Interface</span> : Designed with a clean and intuitive UI/UX, making it easy for users to navigate and manage their properties and finances efficiently.
                         </span>
-                        <br><br><br>
-                        <br> <br><br>
+                        <br><br>
+                        <br class="hide"><br class="hide"> 
+                        <br class="hide"><br class="hide">
                         <span><strong>Technologies: </strong>Angular 16 | Typescript | RESTful API | MVC Arch | Microservices | NodeJS | ExpressJS | Firestore | Firebase Cloud Store | Firebase Cloud Messaging | Node-Internal-Cache | Google Apps Script | Razorpay PG | Web Authn | PWA Support</span>
         
                         <br><br>
@@ -160,7 +162,6 @@
                         <span><strong>App Link:</strong> <a style="display: inline-block; text-decoration: none;color:blue" href="https://rnmr.vercel.app" target="_blank">trackmybus.vercel.app</a></span>
                         <br><br>
                         <hr><hr>
-                        <br><br>
                 </div>
             </div>
             <footer></footer>
@@ -267,6 +268,20 @@
             image.classList = imageClass ? 'image':'unhide';
             let hasClassname = userIcon.classList.contains('fa-user');
             userIcon.classList = hasClassname ?'fa-solid fa-user-slash': 'fa-solid fa-user' ;
+        }
+        let editable = false;
+        function editData(){
+            const editBtn = document.getElementById('edit');
+            editable = !editable;
+            
+            if(editable){
+                document.body.contentEditable = true;
+                editBtn.classList = "fa-solid fa-floppy-disk";
+            }else{
+                document.body.contentEditable = false;
+                editBtn.classList = "fa-solid fa-pen-to-square"
+            }
+            
         }
     </script>
 </body>

@@ -224,7 +224,9 @@ footer{
     position: absolute;
     bottom: 0;
 }
-
+.hide{
+    display: none;
+}
 
 @media print {
     .container{
@@ -265,6 +267,9 @@ footer{
     }
     footer{
         height: 20px;
+    }
+    .hide{
+        display: block;
     }
 }
 @media screen and (max-width:1000px) {
