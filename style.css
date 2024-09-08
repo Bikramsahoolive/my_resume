@@ -148,7 +148,7 @@ a{
 }
 .experience{
     width: 95%;
-    margin-left: 20px;
+    padding: 0 25px;
 }
 .project h2{
     border-bottom: 2px solid rgb(8, 38, 134);
