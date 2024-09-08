@@ -44,7 +44,7 @@ header h3{
     font-weight: 200;
 }
 header .image{
-    height: 50px;
+    height:0;
     width:50px;
     transform: scale(0,0);
     transition: all 0.3s;
@@ -277,7 +277,7 @@ footer{
         margin: auto;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:830px) {
     .container{
         height:auto;
         padding-bottom: 40px;
@@ -317,14 +317,11 @@ footer{
         position: relative;
         top: 50px;
     }
-    /* .content{
-        margin-top: 300px;
-    } */
 }
-@media screen and (max-width:540px) {
+@media screen and (max-width:550px) {
     header{
         height: auto;
-        max-height: 45vh;
+        max-height: 50vh;
         flex-direction: column;
         align-items: center;
     }
@@ -338,7 +335,4 @@ footer{
         width: 300px;
         margin: 20px 0px;
     }
-    /* header img{
-        width: 70px;
-    } */
 }
